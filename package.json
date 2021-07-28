@@ -1,0 +1,28 @@
+{
+  "name": "startpage",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean": "npx del-cli ./dist",
+    "dev": "npm run clean ; npx parcel src/index.html",
+    "build": "npm run clean ; npx parcel build src/index.html",
+    "lint": "npx standard './src/**/*.js'",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "del-cli": "^4.0.1",
+    "parcel-bundler": "^1.12.5",
+    "standard": "^16.0.3"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "dependencies": {
+    "d3": "^7.0.0",
+    "remixicon": "^2.5.0"
+  }
+}

@@ -1,0 +1,19 @@
+<div class="menu">
+  <a href="/" class="icon menu" title="Retour à l'accueil" accesskey="h" onclick="return router.navigateTo('/')"><i class="ri-home-4-line"></i>Accueil</a>
+</div>
+<div class="jsonEditor">
+  <h1>Editeur JSON</h1>
+  <div class="editor">
+    <textarea data-bind="input" onchange="jsonController.updateModel(this)"></textarea>
+    <div class="action">
+      <button onclick="jsonController.showJsonOneLine()" title="Affichage sur une seule ligne"><i class="ri-align-top"></i></button>
+      <button onclick="jsonController.showIndentedJson()" title="Affichage avec indentation"><i class="ri-indent-increase"></i></button>
+      <button onclick="jsonController.notImplemented()" title="Copier le résultat dans le presse papier"><i class="ri-file-copy-2-line"></i></button>
+      <button onclick="jsonController.notImplemented()" title="Affichage sour forme d'arbre"><i class="ri-node-tree"></i></button>
+      <button onclick="jsonController.notImplemented()" title="Affichage sous forme d'arbre - grouper"><i class="ri-align-vertically"></i></button>
+      <button onclick="jsonController.notImplemented()" title="Affichage sous forme d'arbre - dégrouper"><i class="ri-line-height"></i></button>
+    </div>
+    <div id="output"></div>
+  </div>
+  <div class="message"></div>
+</div>

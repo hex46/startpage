@@ -1,0 +1,67 @@
+@use "../../scss/dark-colors";
+
+.jsonEditor {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 10px 0;
+  }
+
+  h2 {
+    margin: 5px 0;
+  }
+
+  .message {
+    @include dark-colors.errorText;
+    font-size: 0.75em;
+    margin: 0.35em 0;
+    font-size: 0.65em;
+    min-height: 25px;
+  }
+
+  .editor {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+
+    .action {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 0.5em;
+      min-height: 250px;
+
+      button {
+        font-size: 0.75em;
+      }
+    }
+    
+    textarea, #output {
+      @include dark-colors.input;
+      @include dark-colors.defaultBorder;
+      margin: 0;
+      padding: 10px;
+      height: 100%;
+      width: 50%;
+      border: none;
+      font-size: 0.60em;
+      overflow-y: auto;
+      overflow-x: auto;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  
+    textarea {
+      resize: none;
+      
+      &.invalid {
+        @include dark-colors.errorBorder;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,56 @@
+@use "dark-colors";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Ubuntu, sans-serif;
+    font-size: 24px;
+    height: 100vh;
+    @include dark-colors.bg;
+    @include dark-colors.text;    
+}
+
+input, button{
+    @include dark-colors.input;
+}
+
+a {
+  @include dark-colors.link;
+
+  &[class*="icon"] {
+    text-decoration: none;
+  }
+
+  i[class*="ri-"] {
+    position: relative;
+    top: 2px;
+    margin-right: 3px;
+  }
+
+  &.menu {
+    @include dark-colors.input;
+    padding: 0.1em 0.5em;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 0.75em;
+
+    &:hover {
+      background-color: dark-colors.$placeholder-input-color;
+    }
+  }
+}
+
+main {
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 10px;
+}
+
+div.menu {
+  align-self: flex-start;
+}

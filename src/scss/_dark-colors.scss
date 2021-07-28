@@ -1,0 +1,59 @@
+$base-color: #232835;
+$text-color: #F4F4F4;
+$placeholder-input-color: #777F99;
+$input-color: #394157;
+$error: #bf616a;
+$warning: #d08770;
+$info: #88c0d0;
+$success: #a3be8c;
+$visited: #8fbcbb;
+
+@mixin link {
+  color: $info;
+  &:visited {
+    color: $visited;
+  }
+}
+
+@mixin bg {
+    background-color: $base-color;
+}
+
+@mixin errorBorder {
+  border: 2px solid $error;
+}
+
+@mixin defaultBorder {
+  border: 2px solid $base-color;
+}
+
+@mixin errorText {
+  color: $error;
+}
+
+@mixin warningText {
+  color: $warning;
+}
+
+@mixin successText {
+  color: $success;
+}
+
+@mixin infoText {
+  color: $info;
+}
+
+@mixin text {
+    color: $text-color
+}
+
+@mixin input {
+  background-color: $input-color;
+  color: $text-color;
+    &::placeholder {
+        color: $placeholder-input-color
+    }
+    &:focus {
+      outline: 2px solid $placeholder-input-color;
+    }
+}

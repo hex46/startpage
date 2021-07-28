@@ -1,0 +1,17 @@
+<div class="home">
+  <div>
+    <h1>
+      Bonjour,
+    </h1>
+    <form onsubmit="return homeController.search(this)">
+      <input type="text" placeholder="Rechercher dans DuckduckGo" required/>
+    </form>
+    <div class="clock">
+      <span data-bind="today"></span>
+      <span data-bind="time"></span>
+    </div>
+  </div>
+  <div class="appList">
+    <a href="/json" class="icon menu" title="JSON Editor" accesskey="j" onclick="return router.navigateTo('/json')"><i class="ri-braces-fill"></i></a>
+  </div>
+</div>
