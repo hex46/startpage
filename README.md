@@ -15,3 +15,7 @@ Ce projet consiste à créer une startpage simple (page par défaut lors de l'ou
 ![Page d'accueil](./screenshots/home.jpg)
 
 ![Editeur JSON](./screenshots/json.jpg)
+
+## Crédits 
+
+- Icons : [REMIX ICON](http://remixicon.com/)
